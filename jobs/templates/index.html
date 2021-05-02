@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Vacancy title</th>
+        <th scope="col">Vacancy Type</th>
+        <th scope="col">Company</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in data %}
+    <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td>{{item['title']}}</td>
+        <td>{{item['type']}}</td>
+        <td>{{item['company']}}</td>
+    </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock content %}
+   
